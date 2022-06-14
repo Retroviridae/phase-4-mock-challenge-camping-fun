@@ -1,11 +1,6 @@
 class SignupsController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :invalid
     
-    def index
-        signups = Signup.all 
-        render json: signups
-    end
-
     def create
         signup = Signup.create!(signup_params)
         activity = signup.activity

@@ -1,3 +1,4 @@
 class IndividualCamperSerializer < ActiveModel::Serializer
-  attributes :id, :name, :age, :activities 
+  attributes :id, :name, :age
+  has_many :activities
 end
